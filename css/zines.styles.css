@@ -3,8 +3,7 @@ ZINES
 ===*/
 .zine-carousel{
   flex-wrap: nowrap;
-  /* OVERFLOW SCROLL TEMP FOR JS */
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .zine-header{
@@ -28,3 +27,22 @@ ZINES
   border-radius: 1.5rem;
   content: '';
 }
+
+.ease-anim{
+  transition: all 1000ms ease-in-out;
+}
+
+.transition-offscreen{
+  transform: translateX(-41%);
+}
+
+.zine-text-container{
+  position: relative;
+}
+
+.zine-slide-text{
+  position: absolute;
+  top: 0;
+}
+
+#zine-slide-two-text{}

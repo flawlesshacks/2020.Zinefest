@@ -26,6 +26,14 @@ body{
   align-self: center;
 }
 
+.visible{
+  opacity: 1;
+}
+
+.hidden{
+  opacity: 0;
+}
+
 /*===
 COLORS
 ===*/
