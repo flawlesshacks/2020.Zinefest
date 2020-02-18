@@ -1,15 +1,21 @@
 /* ===
 ZINES
 ===*/
+.zine-carousel{
+  flex-wrap: nowrap;
+  /* OVERFLOW SCROLL TEMP FOR JS */
+  overflow: scroll;
+}
+
 .zine-header{
   font-size: 5rem;
   font-weight: bold;
 }
 
 .zine-text{
-  padding-left: 4rem;
-  font-size: 2.5rem;
-  color: white;
+  padding-left: 3rem;
+  font-size: 2rem;
+  /* color: white; */
 }
 
 .zine-text::before {

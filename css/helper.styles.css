@@ -13,29 +13,34 @@ footer,header,hgroup,menu,nav,section {
 /*===
 HELPER
 ===*/
-.no-right{
-  margin-right: 0px !important;
+
+body{
+  background-color: #EFEFEF;
 }
 
-.primary-color-txt{
-  color: #7DAA92;
+.full-img{
+  width: 100%;
 }
 
-.primary-color-bg{
-  background-color: #7DAA92;
+.align-middle{
+  align-self: center;
 }
 
-.secondary-color-txt{
-  color: #322A26;
-}
-.secondary-color-bg{
-  background-color: #322A26;
-}
-
-.complimentary-color-txt{
-  color: #D38B5D;
+/*===
+COLORS
+===*/
+.black {
+  background-color: #000 !important
 }
 
-.complimentary-color-bg{
-  background-color: #D38B5D;
+.black-text {
+  color: #000 !important
+}
+
+.white {
+  background-color: #fff !important
+}
+
+.white-text {
+  color: #fff !important
 }
