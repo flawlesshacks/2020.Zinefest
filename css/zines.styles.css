@@ -36,11 +36,19 @@ ZINES
   transform: translateX(-41%);
 }
 
-.zine-text-container{
+.transition-offscreen-2{
+  transform: translateX(-100%);
+}
+
+.transition-offscreen-3{
+  transform: translateX(-158%);
+}
+
+.zine-container{
   position: relative;
 }
 
-.zine-slide-text{
+.zine-slide{
   position: absolute;
   top: 0;
 }

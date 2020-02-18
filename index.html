@@ -47,15 +47,15 @@
   <div class="container" style="height:100vh;">
   </div>
   <!-- ZINES -->
-  <div class="row px-2 mx-0 zine-carousel">
+  <div class="row px-2 mx-5 zine-carousel">
     <!-- SLIDE ONE -->
-    <div class="col-12 ease-anim zine-slide-one">
-      <div class="row">
+    <div id="zine-slide-one" class="col-12 ease-anim">
+      <div class="row zine-container">
         <div class="col-12 col-md-5 align-middle">
           <img class="full-img" src="assets/zine/undraw_browsing_urt9.svg" alt="What are Zines?">
         </div>
-        <div class="col-12 col-md-7 zine-text-container">
-          <section id="zine-slide-one-text" class="ease-anim zine-slide-text ">
+        <div class="col-12 col-md-7 ">
+          <section id="zine-slide-one-text" class="ease-anim zine-slide">
             <p class='zine-header my-5 primary-color-txt'>What are Zines?</p>
             <p class='zine-text'>A zine (zeen) is an independently or self-published booklet, often created
               by physically cutting and gluing text and images together onto am aster flat for
@@ -63,7 +63,7 @@
               on a computer.
             </p>
           </section>
-          <section id="zine-slide-two-text" class="ease-anim zine-slide-text hidden">
+          <section id="zine-slide-two-text" class="ease-anim zine-slide hidden">
             <p class='zine-header my-5 primary-color-txt'>Zines!</p>
             <p class='zine-text'>GREAT EXAMPLES OF ZINES HERE
             </p>
@@ -72,40 +72,41 @@
       </div>
     </div>
     <!-- SLIDE TWO -->
-    <div class="col-12 ease-anim zine-slide-two">
-      <div class="row">
+    <div id="zine-slide-two" class="col-12 ease-anim">
+      <div class="row zine-container">
         <div class="col-12 col-md-5 align-middle">
-          <img class="full-img" src="assets/zine/undraw_book_lover_mkck.svg" alt="Book">
+          <section id="zine-image-two" class="ease-anim zine-slide">
+            <img class="full-img" src="assets/zine/undraw_book_lover_mkck.svg" alt="Book">
+          </section>
+          <section id="zine-image-three" class="ease-anim zine-slide hidden">
+            <img class="full-img" src="assets/zine/undraw_cookie_love_ulvn.svg" alt="Love">
+          </section>
         </div>
       </div>
     </div>
     <!-- SLIDE THREE -->
-    <div class="col-12 col-md-5 align-middle">
-      <img class="full-img" src="assets/zine/undraw_cookie_love_ulvn.svg" alt="Love">
-    </div>
-    <div class="col-12 col-md-7">
-      <p class='zine-header my-5 primary-color-txt'>Get Connected</p>
-      <p class='zine-text'>LINKS/ETC
-      </p>
+    <div id="zine-slide-three" class="col-12 ease-anim">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          <p class='zine-header my-5 primary-color-txt'>Get Connected</p>
+          <p class='zine-text'>LINKS/ETC
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container">
     <div class='row justify-content-center'>
       <div class='zine-examples'>
-        <!-- DEFAULT ON BUTTON 1
-      WHEN CLICK ON BUTTON 2 
-      TRANSITION SLIDE TO MOVE WHAT ARE ZINE SVG OUT OF VIEW
-      WHAT ARE ZINE HEADER/TEXT CHANGES TO EXAMPLES OF ZINE INFOMATION 
-      WHEN CLICK ON BUTTON 3
-      TRANSITION SLIDES TO MOVE EXAMPLE OF ZINE INFORMATION HEADER/TEXT OUT OF VIEW
-      BOOK SVG IS NOW SWAPPED TO LOVE SVG
-      LOVE TEXT IS NOW IN VIEW-->
         BUTTON HANDLERS
         <div id='zine-button-one' style="height: 50px;">
           BUTTON 1
         </div>
         <div id='zine-button-two' style="height: 50px;">
           BUTTON 2
+        </div>
+        <div id='zine-button-three' style="height: 50px;">
+          BUTTON 3
         </div>
       </div>
     </div>
