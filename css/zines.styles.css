@@ -1,0 +1,24 @@
+/* ===
+ZINES
+===*/
+.zine-header{
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.zine-text{
+  padding-left: 4rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.zine-text::before {
+  position: absolute;
+  left: 0;
+  top: 67%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #7DAA92;
+  border-radius: 1.5rem;
+  content: '';
+}
