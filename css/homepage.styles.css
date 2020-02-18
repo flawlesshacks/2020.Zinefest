@@ -1,0 +1,77 @@
+/* ===
+RESET
+===*/
+* {
+  padding: 0;
+  margin: 0;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+/*===
+HELPER
+===*/
+
+.no-right{
+  margin-right: 0px !important;
+}
+
+/* ===
+NAVBAR
+===*/
+#nav {
+  font-size: 1.2rem;
+  position: sticky;
+  top:0px;
+}
+
+#logo-container{
+  position: fixed;
+}
+
+#logo{
+  height: 150px;
+  width: 150px;
+}
+
+.nav-list{
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-list .nav-top-item{
+  margin-top: 3.5rem;
+}
+
+.nav-list .nav-bottom-item{
+  margin-top: auto;
+}
+
+.nav-list .nav-links {
+  padding: 1rem 2rem;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-list .nav-links:link {
+  text-decoration: none;
+}
+
+.nav-list .nav-links:visited {
+  text-decoration: none;
+}
+
+.nav-list .nav-links:hover {
+  text-decoration: none;
+}
+
+.nav-list .nav-links:active {
+  text-decoration: none;
+  border-bottom: 1px solid gray;
+}
