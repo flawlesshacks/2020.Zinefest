@@ -4,16 +4,18 @@ ZINES
 .zine-carousel{
   flex-wrap: nowrap;
   overflow: hidden;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .zine-header{
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .zine-text{
-  padding-left: 3rem;
-  font-size: 2rem;
+  padding-left: 2rem;
+  font-size: 1.5rem;
   /* color: white; */
 }
 
@@ -51,4 +53,12 @@ ZINES
 .zine-slide{
   position: absolute;
   top: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  .zine-carousel{  
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
 }
