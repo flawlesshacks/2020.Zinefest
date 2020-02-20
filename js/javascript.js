@@ -72,11 +72,11 @@ const updateArrow = (arrow, option) => {
 const handleButtonOne = () => {
   const slides_three = document.getElementById('zine-slide-three')
   if (slides_three.classList.contains('active')) {
-    toggle_slide_two('remove', 'add')
     toggle_slide_three('remove', 'add')
   } else {
     toggle_slide_one('remove', 'add')
   }
+  toggle_slide_two('remove', 'add')
   isActive("zine-slide-one")
   updateArrow('arrow-left', 'add')
   updateArrow('arrow-right', 'remove')
@@ -85,12 +85,9 @@ const handleButtonOne = () => {
 // === Change to slide two
 const handleButtonTwo = () => {
   const slides_three = document.getElementById('zine-slide-three')
-  if (slides_three.classList.contains('active')) {
+  if (slides_three.classList.contains('active'))
     toggle_slide_three('remove', 'add')
-    toggle_slide_two('add', 'remove')
-  } else {
-    toggle_slide_two('add', 'remove')
-  }
+  toggle_slide_two('add', 'remove')
   isActive("zine-slide-two")
   updateArrow('arrow-left', 'remove')
   updateArrow('arrow-right', 'remove')
