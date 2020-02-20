@@ -1,8 +1,17 @@
+/* ===
+STORIES
+===*/
 #stories{
   color: #EFEFEF;
   -webkit-text-stroke: 3px #B377E2;
   font-size: 5rem;
   margin: 2rem 0rem;
+}
+
+.video-container{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
 
 .story-boxes{
@@ -11,6 +20,10 @@
 
 .active-story{
   border-bottom: 0px !important;
+}
+
+.story-controller{
+  cursor: pointer;
 }
 
 #story-container{
@@ -23,5 +36,5 @@
 }
 
 .story-text{
-  font: 1.8rem;
+  font-size: 1.4rem;
 }
