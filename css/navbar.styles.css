@@ -58,3 +58,19 @@ NAVBAR
   text-decoration: none;
   border-bottom: 1px solid gray;
 }
+
+@media screen and (max-width: 800px) {
+  #logo{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: 20px;
+  }
+  .nav-list .nav-top-item{
+    margin-top: 1rem;
+    padding-left: 2rem !important;
+  }
+  .nav-list .nav-bottom-item{
+    margin-top: 0.5rem;
+  }
+}
