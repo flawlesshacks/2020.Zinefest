@@ -81,6 +81,11 @@ ZINES
   float: right;
 }
 
+.arrow-disabled{
+  cursor: default !important;
+  color: darkgray;
+}
+
 
 @media screen and (max-width: 800px) {
   .zine-header{
