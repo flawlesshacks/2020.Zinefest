@@ -77,6 +77,7 @@ const handleButtonOne = () => {
   } else {
     toggle_slide_one("remove", "add")
   }
+  toggle_slide_two('remove', 'add')
   isActive("zine-slide-one")
   updateArrow("arrow-left", "add")
   updateArrow("arrow-right", "remove")
