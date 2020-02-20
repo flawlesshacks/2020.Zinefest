@@ -1,6 +1,11 @@
 /* ===
 ZINES
 ===*/
+#zine{
+  background-color: #201F1B;
+  color: white;
+}
+
 .zine-carousel{
   flex-wrap: nowrap;
   overflow: hidden;
