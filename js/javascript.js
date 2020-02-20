@@ -156,8 +156,8 @@ function handleRenderStates() {
       linkString += `<li><a href=${e.website}>${e.site_name}</a></li>`
     })
     stateString += (`
-    <div class="col-4 col-md-3">
-    <p class="state">${state.name}</p>
+    <div class="col-6 col-md-3">
+    <p class="state truncate">${state.name}</p>
     <ul class="zine-list">
       ${linkString}
     </ul>
