@@ -29,6 +29,10 @@ body{
   width: 100%;
 }
 
+.limited-img{
+  height: 300px;
+}
+
 .align-middle{
   align-self: center;
 }
