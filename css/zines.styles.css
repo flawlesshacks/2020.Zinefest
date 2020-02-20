@@ -6,6 +6,7 @@ ZINES
   overflow: hidden;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  position: relative;
 }
 
 .zine-header{
@@ -27,6 +28,12 @@ ZINES
   background: #7DAA92;
   border-radius: 1.5rem;
   content: '';
+}
+
+.zine-buttons{
+  height: 50px;
+  padding: 0rem 1.5rem;
+  cursor: pointer;
 }
 
 .ease-anim{
@@ -55,13 +62,46 @@ ZINES
   top: 0;
 }
 
+.carousel-control{
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+
+.arrow-icons{
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#arrow-left{
+  float: left;
+}
+
+#arrow-right{
+  float: right;
+}
+
+.arrow-disabled{
+  cursor: default !important;
+  color: darkgray;
+}
+
 
 @media screen and (max-width: 800px) {
+  .zine-header{
+    font-size: 2rem;
+  }
+  
+  .zine-text{
+    font-size: 1.4rem;
+  }
+
   .zine-carousel{  
     margin-left: 0rem;
     margin-right: 0rem;
     flex-wrap: wrap;
   }
+
   .zine-slide{
     position: relative;
   }
