@@ -19,7 +19,6 @@ STORIES
 
 .story-box-container .story-boxes .story-box-header {
   font-size: 1.8rem;
-  text-overflow: ellipsis;
 }
 
 .active-story {

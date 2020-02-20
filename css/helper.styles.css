@@ -33,6 +33,14 @@ body{
 
 .limited-img{
   height: 300px;
+  max-width: 100vw;
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .align-middle{
