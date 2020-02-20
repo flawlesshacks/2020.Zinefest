@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./css/navbar.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/zines.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/stories.styles.css" type="text/css">
+  <link rel="stylesheet" href="./css/events.styles.css" type="text/css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@
   </div>
   <!-- ZINES -->
   <div id="zine" class="py-5">
-    <div class="container">
+    <div class="container" style="position: relative;">
       <div class="container hide-on-sm">
         <div class="row justify-content-center text-align-center">
           <div class="col-12">
@@ -129,12 +130,12 @@
             </div>
           </div>
         </div>
-        <!-- CAROUSEL CONTROLS -->
-        <div class='carousel-control hide-on-sm'>
-          <i id="arrow-left" class="material-icons arrow-icons arrow-disabled">keyboard_arrow_left</i>
-          <i id="arrow-right" class="material-icons arrow-icons">keyboard_arrow_right</i>
-        </div>
       </div>
+              <!-- CAROUSEL CONTROLS -->
+              <div class='carousel-control hide-on-sm'>
+                <i id="arrow-left" class="material-icons arrow-icons arrow-disabled">keyboard_arrow_left</i>
+                <i id="arrow-right" class="material-icons arrow-icons">keyboard_arrow_right</i>
+              </div>
     </div>
   </div>
   <!-- STORIES -->
@@ -218,49 +219,55 @@
       <div>
         <p class="photo-title">Zine by 
           Giulia Bertelli</p>
-        <div class="photo-blur" style="background-image: url(https://images.unsplash.com/photo-1475053081036-c8eb31d187b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-position: bottom; background-size: cover;"></div>
+        <div class="photo-blur" style="background-image: url(./assets/stories/pictures/zine-giulia-bertelli.jpeg); background-position: bottom; background-size: cover;"></div>
       </div>
-      <img class="limited-img" src="https://images.unsplash.com/photo-1475053081036-c8eb31d187b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Photo">
+      <img class="limited-img" src="./assets/stories/pictures/zine-giulia-bertelli.jpeg" alt="Photo">
     </div>
     <div class="image-collection-items">
       <div>
         <p class="photo-title black-text">Hypebeast by 
           Linus Mimietz</p>
-        <div class="photo-blur" style="background-image: url(https://images.unsplash.com/photo-1560203303-533105fdd080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1764&q=80); background-position: bottom; background-size: cover;"></div>
+        <div class="photo-blur" style="background-image: url(./assets/stories/pictures/hypebeast-linus-mimietz.jpeg); background-position: bottom; background-size: cover;"></div>
       </div>
-      <img class="limited-img" src="https://images.unsplash.com/photo-1560203303-533105fdd080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1764&q=80" alt="Photo">
+      <img class="limited-img" src="./assets/stories/pictures/hypebeast-linus-mimietz.jpeg" alt="Photo">
+    </div>
+    <div class="image-collection-items">
+      <div>
+        <p class="photo-title">Southern Exposure by 
+          New York Queer Zine Fair</p>
+        <div class="photo-blur" style="background-image: url(./assets/stories/pictures/southern-exposure-new_york_queer_zine_fair.jpg); background-position: bottom; background-size: cover;"></div>
+      </div>
+      <img class="limited-img" src="./assets/stories/pictures/southern-exposure-new_york_queer_zine_fair.jpg" alt="Photo">
     </div>
     <div class="image-collection-items">
       <div>
         <p class="photo-title">Quiet reading time by 
           Annie Spratt</p>
-        <div class="photo-blur" style="background-image: url(https://images.unsplash.com/photo-1525247663235-1d5a3ae627fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); background-position: bottom; background-size: cover;"></div>
+        <div class="photo-blur" style="background-image: url(./assets/stories/pictures/quiet-reading-time-annie-spratt.jpeg); background-position: bottom; background-size: cover;"></div>
       </div>
-      <img class="limited-img" src="https://images.unsplash.com/photo-1525247663235-1d5a3ae627fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Photo">
-    </div>
-    <div class="image-collection-items">
-      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
-    </div>
-    <div class="image-collection-items">
-      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
-    </div>
-    <div class="image-collection-items">
-      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
-    </div>
-    <div class="image-collection-items">
-      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
-    </div>
-    <div class="image-collection-items">
-      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
+      <img class="limited-img" src="./assets/stories/pictures/quiet-reading-time-annie-spratt.jpeg" alt="Photo">
     </div>
   </div>
   <!-- EVENTS -->
+  <div class="row mx-0 events-container"">
+  <div class="container align-middle mt-5">
+    <h1 id="events">Events</h1>
+    <div id="states" class="row">
+      
+    </div>
+  </div>
+  </div>
   <!-- FOOTER -->
   <div style="height: 70vh;">
 
   </div>
   <!-- SCRIPTS -->
   <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script> -->
+  <!-- <script src="./assets/list-of-zines.txt" type="text/javascript">
+//   function myFunc(myObj) {
+//   console.log(myObj)
+// }
+  </script> -->
   <script src="./js/javascript.js" type="text/javascript"></script>
 </body>
 
