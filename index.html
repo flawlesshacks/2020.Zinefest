@@ -31,7 +31,7 @@
         <a class="nav-links" href="#">HOME</a>
       </li>
       <li class="nav-top-item">
-        <a class="nav-links" href="#">ZINE</a>
+        <a class="nav-links" href="#zine">ZINE</a>
       </li>
     </ul>
     <ul class="nav-list col-12 col-md-5 offset-md-2 justify-content-center justify-content-md-start">
@@ -47,7 +47,7 @@
   <div class="container" style="height:100vh;">
   </div>
   <!-- ZINES -->
-  <div class="container">
+  <div id="zine" class="container">
     <div class="row px-2 zine-carousel">
       <!-- SLIDE ONE -->
       <div id="zine-slide-one" class="col-12 ease-anim">
@@ -64,7 +64,7 @@
                 on a computer.
               </p>
             </section>
-            <section id="zine-slide-two-text" class="ease-anim zine-slide hidden">
+            <section id="zine-slide-two-text" class="ease-anim zine-slide hidden hide-on-sm">
               <p class='zine-header my-2 primary-color-txt'>Zines!</p>
               <p class='zine-text'>GREAT EXAMPLES OF ZINES HERE
               </p>
@@ -79,15 +79,31 @@
             <section id="zine-image-two" class="ease-anim zine-slide">
               <img class="full-img" src="assets/zine/undraw_book_lover_mkck.svg" alt="Book">
             </section>
-            <section id="zine-image-three" class="ease-anim zine-slide hidden">
+            <section id="zine-image-three" class="ease-anim zine-slide hidden hide-on-sm">
               <img class="full-img" src="assets/zine/undraw_cookie_love_ulvn.svg" alt="Love">
             </section>
           </div>
+          <!-- FOR MOBILE DISPLAY -->
+          <div class="col-12 col-md-7 show-on-sm-only">
+            <section>
+              <p class='zine-header my-2 primary-color-txt'>Zines!</p>
+              <p class='zine-text'>GREAT EXAMPLES OF ZINES HERE
+              </p>
+            </section>
+          </div>
+          <!-- END -->
         </div>
       </div>
       <!-- SLIDE THREE -->
       <div id="zine-slide-three" class="col-12 ease-anim">
         <div class="row">
+          <!-- FOR MOBILE DISPLAY -->
+          <div class="col-12 col-md-5 align-middle show-on-sm-only">
+            <section>
+              <img class="full-img" src="assets/zine/undraw_cookie_love_ulvn.svg" alt="Love">
+            </section>
+          </div>
+          <!-- END -->
           <div class="col-12 col-md-7">
             <p class='zine-header my-2 primary-color-txt'>Get Connected</p>
             <p class='zine-text'>LINKS/ETC
@@ -96,7 +112,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container hide-on-sm">
       <div class='row justify-content-center'>
         <div class='zine-examples'>
           BUTTON HANDLERS

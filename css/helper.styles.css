@@ -13,6 +13,9 @@ footer,header,hgroup,menu,nav,section {
 /*===
 HELPER
 ===*/
+html {
+  scroll-behavior: smooth;
+}
 
 body{
   background-color: #EFEFEF;
@@ -32,6 +35,21 @@ body{
 
 .hidden{
   opacity: 0;
+}
+
+.show-on-sm-only{
+  display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+  .show-on-sm-only{
+    display: block;
+  }
+
+  .hide-on-sm{
+    display: none;
+  } 
 }
 
 /*===

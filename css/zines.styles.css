@@ -16,7 +16,6 @@ ZINES
 .zine-text{
   padding-left: 2rem;
   font-size: 1.5rem;
-  /* color: white; */
 }
 
 .zine-text::before {
@@ -48,6 +47,7 @@ ZINES
 
 .zine-container{
   position: relative;
+  padding: 3rem 0rem;
 }
 
 .zine-slide{
@@ -60,5 +60,9 @@ ZINES
   .zine-carousel{  
     margin-left: 0rem;
     margin-right: 0rem;
+    flex-wrap: wrap;
+  }
+  .zine-slide{
+    position: relative;
   }
 }
