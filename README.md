@@ -13,6 +13,7 @@
 
   * [Website](#website)
   * [Assets](#assets)
+  * [Update](#update)
 
 
 <h2 id="website">Website</h2>
@@ -31,3 +32,17 @@ Oswald Fonts [Google Fonts Oswald](https://fonts.google.com/?selection.family=Os
 Various Icons [Material Design](https://material.io/)
 
 Various Photos [Unsplash](https://unsplash.com/)
+
+<h2 id="update">Update</h2>
+
+New Zines to add to the list?
+
+How to update:
+
+- Open assets/ and load the text file `state-object.txt`
+
+- Add or Update new states and websites to the object list. (List is alphabetized by state then by website name.)
+
+- JSON.stringify() the new text string and save as `list-of-zines.json`.
+
+- Git Add, Commit, and Push. JavaScript file loads from raw file of `assets/list-of-zine.json` hosted on GitHub.
