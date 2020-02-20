@@ -1,0 +1,25 @@
+/* ===
+EVENTS
+===*/
+#events {
+  color: #18191C;
+  -webkit-text-stroke: 3px #5348E6;
+  font-size: 5rem;
+  margin: 2rem 0rem;
+}
+
+.events-container{
+  background-color: #18191C;
+}
+
+.state{
+  text-transform: uppercase;
+  color: white;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.zine-list{
+  color: #C7CCD1;
+  font-size: 1.2rem;
+}
