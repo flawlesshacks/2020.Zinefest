@@ -119,7 +119,7 @@ handleArrow = (arrow) => {
   } else {
     if (slides_two.classList.contains("active")) {
       handleButtonThree()
-    } else if(slides_one.classList.contains("active")) {
+    } else if (slides_one.classList.contains("active")) {
       handleButtonTwo()
     }
   }
@@ -147,328 +147,45 @@ document.getElementById("arrow-right").addEventListener("click", () => {
   handleArrow("arrow-right")
 });
 
+function readTextFile(file)
+{
+    let reader = new XMLHttpRequest();
+    reader.open("GET", file, false);
+    reader.onreadystatechange = function ()
+    {
+        if(reader.readyState === 4)
+        {
+            if(reader.status === 200 || reader.status == 0)
+            {
+                let allText = reader.responseText;
+                reader.send(allText);
+            }
+        }
+    }
+    reader.send(null);
+}
 
-const zineStates = [
-  {
-    name: "Alaska",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      },
-      {
-        site_name:'Apple',
-        website:'https://Apple.com'
-      }
-    ]
-  },
-  {
-    name: "Alabama",
-    list: [
-      {
-        site_name:'Microsoft',
-        website: 'https://Microsoft.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "California",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Colorado",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Connecticut",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Florida",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Georgia",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Hawaii",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  },
-  {
-    name: "Arizona",
-    list: [
-      {
-        site_name:'Google',
-        website: 'https://google.com'
-      }
-    ]
-  }
-]
 
 // DOCUMENT LOAD
-window.onload = ()=>{
-  let stateString=""
-  let linkString=""
-  zineStates.forEach(state=>{
-    state.list.forEach(e=>{
-      linkString+=`<li><a href=${e.website}>${e.site_name}</a></li>`
-    })
-    stateString+=(`
-    <div class="col-4 col-md-3">
-    <p class="state">${state.name}</p>
-    <ul class="zine-list">
-      ${linkString}
-    </ul>
-  </div>`)
+window.onload = () => {
+  let stateString = ""
+  let linkString = ""
+  console.log(readTextFile("file://./assets/list-of-zines.JSON"))
+  // let zineStates = JSON.parse(JSON.stringify('./assets/list-of-zines.txt'))
+  console.log(zineStates)
+  // zineStates.forEach(state => {
+  //   state.list.forEach(e => {
+  //     linkString += `<li><a href=${e.website}>${e.site_name}</a></li>`
+  //   })
+  //   stateString += (`
+  //   <div class="col-4 col-md-3">
+  //   <p class="state">${state.name}</p>
+  //   <ul class="zine-list">
+  //     ${linkString}
+  //   </ul>
+  // </div>`)
 
-  linkString=""
-  })
+  //   linkString = ""
+  // })
   document.getElementById("states").innerHTML = stateString
 }
