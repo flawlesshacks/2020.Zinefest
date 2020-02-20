@@ -17,7 +17,7 @@
 
 <h2 id="website">Website</h2>
 
-[Flawless Zine](https://flawlesshacks.github.io/2020.Zinefest/)
+Live: [Flawless Zine](https://flawlesshacks.github.io/2020.Zinefest/)
 
 Languages:
 HTML, CSS, JavaScript
@@ -26,6 +26,8 @@ HTML, CSS, JavaScript
 
 Amazing character illustrations provided by [Undraw](https://undraw.co/)
 
-Fonts [FONT NAME](https://fonts.google.com/)
+Oswald Fonts [Google Fonts Oswald](https://fonts.google.com/?selection.family=Oswald)
 
-Icons [Material Design](https://material.io/)
+Various Icons [Material Design](https://material.io/)
+
+Various Photos [Unsplash](https://unsplash.com/)

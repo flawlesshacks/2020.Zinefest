@@ -37,20 +37,27 @@ STORIES
 
 .story-header {
   font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.story-author {
+  color: gray;
+  border-bottom: 1px solid gray;
+  text-transform: uppercase;
 }
 
 .story-text {
   font-size: 1.4rem;
 }
 
-.image-collection-items{
+.image-collection-items {
   position: relative;
   padding: 0;
 }
 
-.image-collection-items .photo-title{
+.image-collection-items .photo-title {
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   padding: 1rem;
   z-index: 2;
   color: white;
@@ -63,4 +70,3 @@ STORIES
   width: 100%;
   filter: blur(5px);
 }
-
