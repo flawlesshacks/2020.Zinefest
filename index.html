@@ -11,7 +11,6 @@
   <meta name="keywords" content="zinefest,magazine,comic,newspaper,original,content">
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css"> -->
   <link rel="stylesheet" href="./css/bootstrap-grid.min.css" type="text/css">
   <link rel="stylesheet" href="./css/helper.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/navbar.styles.css" type="text/css">
@@ -141,12 +140,18 @@
   <!-- STORIES -->
   <div class="container align-middle mt-5">
     <h1 id="stories">Stories</h1>
-    <div class="row my-4">
+    <!-- POSTS -->
+    <div class="row">
+      <div class="col-12">
+      <h2 style="text-align: end;">Posts</h2>
+      </div>
+    </div>
+    <div class="row my-4 story-box-container">
       <!-- STORY ONE -->
-      <div class="col-12 col-md-4 text-align-center">
+      <div class="col-6 col-md-4 text-align-center">
         <div class="story-boxes mx-2 p-4 active-story">
           <p class="gray-text">Story Type</p>
-          <h2>Story Title</h2>
+          <h2 class="story-box-header">Story Title</h2>
           <div id="story-one" class="story-controller">
             <p>Read More</p>
             <i class="material-icons">arrow_drop_down</i>
@@ -154,10 +159,10 @@
         </div>
       </div>
       <!-- STORY TWO -->
-      <div class="col-12 col-md-4 text-align-center">
+      <div class="col-6 col-md-4 text-align-center">
         <div class="story-boxes mx-2 p-4">
           <p class="gray-text">Story Type</p>
-          <h2>Story Title</h2>
+          <h2 class="story-box-header">Story Title</h2>
           <div id="story-two" class="story-controller">
             <p>Read More</p>
             <i class="material-icons">arrow_drop_down</i>
@@ -165,10 +170,10 @@
         </div>
       </div>
       <!-- STORY THREE -->
-      <div class="col-12 col-md-4 text-align-center">
+      <div class="col-6 col-md-4 text-align-center">
         <div class="story-boxes mx-2 p-4">
           <p class="gray-text">Story Type</p>
-          <h2>Story Title</h2>
+          <h2 class="story-box-header">Story Title</h2>
           <div id="story-three" class="story-controller">
             <p>Read More</p>
             <i class="material-icons">arrow_drop_down</i>
@@ -176,14 +181,15 @@
         </div>
       </div>
     </div>
+    <!-- STORY CONTAINER -->
     <div class="col-12">
       <div id="story-container" class="row">
         <div class="col-3">
           <img class="full-img" src="https://via.placeholder.com/300" alt="Author Photo">
         </div>
-        <div class="col-9">
+        <div class="col-9 align-middle">
           <h1 class="story-header">Full Story Title</h1>
-          <h4 class="gray-text" style="border-bottom: 1px solid gray;">
+          <h4 class="story-author">
             By: AUTHOR NAME
           </h4>
         </div>
@@ -199,6 +205,53 @@
           </p>
         </article>
       </div>
+    </div>
+    <!-- PICTURES -->
+    <div class="row my-3">
+      <div class="col-12">
+      <h2 style="text-align: end;">Pictures</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-0">
+    <div class="image-collection-items">
+      <div>
+        <p class="photo-title">Zine by 
+          Giulia Bertelli</p>
+        <div class="photo-blur" style="background-image: url(https://images.unsplash.com/photo-1475053081036-c8eb31d187b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); background-position: bottom; background-size: cover;"></div>
+      </div>
+      <img class="limited-img" src="https://images.unsplash.com/photo-1475053081036-c8eb31d187b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Photo">
+    </div>
+    <div class="image-collection-items">
+      <div>
+        <p class="photo-title black-text">Hypebeast by 
+          Linus Mimietz</p>
+        <div class="photo-blur" style="background-image: url(https://images.unsplash.com/photo-1560203303-533105fdd080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1764&q=80); background-position: bottom; background-size: cover;"></div>
+      </div>
+      <img class="limited-img" src="https://images.unsplash.com/photo-1560203303-533105fdd080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1764&q=80" alt="Photo">
+    </div>
+    <div class="image-collection-items">
+      <div>
+        <p class="photo-title">Quiet reading time by 
+          Annie Spratt</p>
+        <div class="photo-blur" style="background-image: url(https://images.unsplash.com/photo-1525247663235-1d5a3ae627fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80); background-position: bottom; background-size: cover;"></div>
+      </div>
+      <img class="limited-img" src="https://images.unsplash.com/photo-1525247663235-1d5a3ae627fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Photo">
+    </div>
+    <div class="image-collection-items">
+      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
+    </div>
+    <div class="image-collection-items">
+      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
+    </div>
+    <div class="image-collection-items">
+      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
+    </div>
+    <div class="image-collection-items">
+      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
+    </div>
+    <div class="image-collection-items">
+      <img class="limited-img" src="https://via.placeholder.com/300" alt="Photo">
     </div>
   </div>
   <!-- EVENTS -->
