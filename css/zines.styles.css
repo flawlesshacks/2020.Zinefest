@@ -99,6 +99,11 @@ ZINES
   
   .zine-text{
     font-size: 1.4rem;
+    padding-left: 1rem;
+  }
+
+  .zine-text::before{
+    left:-20px
   }
 
   .zine-carousel{  
