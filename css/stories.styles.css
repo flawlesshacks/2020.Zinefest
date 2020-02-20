@@ -1,0 +1,40 @@
+/* ===
+STORIES
+===*/
+#stories{
+  color: #EFEFEF;
+  -webkit-text-stroke: 3px #B377E2;
+  font-size: 5rem;
+  margin: 2rem 0rem;
+}
+
+.video-container{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.story-boxes{
+  border:5px solid black;
+}
+
+.active-story{
+  border-bottom: 0px !important;
+}
+
+.story-controller{
+  cursor: pointer;
+}
+
+#story-container{
+  padding: 2rem;
+  border: 5px solid black;
+}
+
+.story-header{
+  font-size: 3rem;
+}
+
+.story-text{
+  font-size: 1.4rem;
+}
