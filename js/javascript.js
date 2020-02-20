@@ -147,45 +147,32 @@ document.getElementById("arrow-right").addEventListener("click", () => {
   handleArrow("arrow-right")
 });
 
-function readTextFile(file)
-{
-    let reader = new XMLHttpRequest();
-    reader.open("GET", file, false);
-    reader.onreadystatechange = function ()
-    {
-        if(reader.readyState === 4)
-        {
-            if(reader.status === 200 || reader.status == 0)
-            {
-                let allText = reader.responseText;
-                reader.send(allText);
-            }
-        }
-    }
-    reader.send(null);
-}
-
-
-// DOCUMENT LOAD
-window.onload = () => {
+function handleRenderStates() {
   let stateString = ""
   let linkString = ""
-  console.log(readTextFile("file://./assets/list-of-zines.JSON"))
-  // let zineStates = JSON.parse(JSON.stringify('./assets/list-of-zines.txt'))
-  console.log(zineStates)
-  // zineStates.forEach(state => {
-  //   state.list.forEach(e => {
-  //     linkString += `<li><a href=${e.website}>${e.site_name}</a></li>`
-  //   })
-  //   stateString += (`
-  //   <div class="col-4 col-md-3">
-  //   <p class="state">${state.name}</p>
-  //   <ul class="zine-list">
-  //     ${linkString}
-  //   </ul>
-  // </div>`)
+  let zineStates = JSON.parse(this.responseText)
+  zineStates.states.forEach(state => {
+    state.list.forEach(e => {
+      linkString += `<li><a href=${e.website}>${e.site_name}</a></li>`
+    })
+    stateString += (`
+    <div class="col-4 col-md-3">
+    <p class="state">${state.name}</p>
+    <ul class="zine-list">
+      ${linkString}
+    </ul>
+  </div>`)
 
-  //   linkString = ""
-  // })
+    linkString = ""
+  })
   document.getElementById("states").innerHTML = stateString
+}
+
+// ==== DOCUMENT LOAD
+window.onload = () => {
+  // LOAD STATE FROM JSON
+  var xmlRequest = new XMLHttpRequest();
+  xmlRequest.addEventListener("load", handleRenderStates);
+  xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-zines.JSON");
+  xmlRequest.send();
 }
