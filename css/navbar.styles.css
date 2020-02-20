@@ -1,33 +1,16 @@
 /* ===
-RESET
-===*/
-* {
-  padding: 0;
-  margin: 0;
-}
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
-    display:block;
-}
-
-/*===
-HELPER
-===*/
-
-.no-right{
-  margin-right: 0px !important;
-}
-
-/* ===
 NAVBAR
 ===*/
 #nav {
+  background-color: white;
+  z-index: 99;
   font-size: 1.2rem;
   position: sticky;
   top:0px;
 }
 
 #logo-container{
+  top: 0px;
   position: fixed;
 }
 
@@ -74,4 +57,20 @@ NAVBAR
 .nav-list .nav-links:active {
   text-decoration: none;
   border-bottom: 1px solid gray;
+}
+
+@media screen and (max-width: 800px) {
+  #logo{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: 20px;
+  }
+  .nav-list .nav-top-item{
+    margin-top: 1rem;
+    padding-left: 2rem !important;
+  }
+  .nav-list .nav-bottom-item{
+    margin-top: 0.5rem;
+  }
 }

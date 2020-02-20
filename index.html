@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!-- META -->
 
 <head>
   <meta charset="UTF-8">
@@ -8,37 +9,132 @@
   <meta name="author" content="name">
   <meta name="description" content="ZineFest">
   <meta name="keywords" content="zinefest,magazine,comic,newspaper,original,content">
-  <!-- <link rel="shortcut icon" href="favicon.ico" type="image"> -->
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image">
   <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css"> -->
   <link rel="stylesheet" href="./css/bootstrap-grid.min.css" type="text/css">
-  <link rel="stylesheet" href="./css/homepage.styles.css" type="text/css">
+  <link rel="stylesheet" href="./css/helper.styles.css" type="text/css">
+  <link rel="stylesheet" href="./css/navbar.styles.css" type="text/css">
+  <link rel="stylesheet" href="./css/zines.styles.css" type="text/css">
 </head>
 
 <body>
-  <nav id="nav" class='row no-right justify-content-center'>
+  <!-- BODY -->
+  <!-- NAVBAR -->
+  <nav id="nav" class="row mx-0 justify-content-center">
     <div id="logo-container">
-      <a href="#">
-        <img id="logo" src='https://www.brownweinraub.com/wp-content/uploads/2017/09/placeholder.jpg' alt='Zinefest' />
+      <a href="#home">
+        <img id="logo" src="./assets/logo_purple.png" alt="Zinefest">
       </a>
     </div>
-    <ul class="nav-list col-12 col-md-5 justify-content-center justify-content-md-end">
-      <li class="nav-top-item">
-        <a class="nav-links" href="#">HOME</a>
+    <ul class="nav-list px-0 col-12 col-md-5 justify-content-center justify-content-md-end">
+      <li class="nav-top-item px-2">
+        <a class="nav-links pl-1" href="#home">HOME</a>
       </li>
-      <li class="nav-top-item">
-        <a class="nav-links" href="#">ZINE</a>
+      <li class="nav-top-item pl-1 px-2">
+        <a class="nav-links" href="#zine">ZINE</a>
       </li>
     </ul>
-    <ul class="nav-list col-12 col-md-5 offset-md-2 justify-content-center justify-content-md-start">
-      <li class="nav-bottom-item">
-        <a class="nav-links" href="#">STORIES</a>
+    <ul class="nav-list px-0 col-12 col-md-5 offset-md-2 justify-content-center justify-content-md-start">
+      <li class="nav-bottom-item px-2">
+        <a class="nav-links" href="#stories">STORIES</a>
       </li>
-      <li class="nav-bottom-item">
-        <a class="nav-links" href="#">EVENTS</a>
+      <li class="nav-bottom-item px-2">
+        <a class="nav-links" href="#events">EVENTS</a>
       </li>
     </ul>
   </nav>
+  <!-- HOME -->
+  <div id="home" class="container" style="height:100vh;">
+  </div>
+  <!-- ZINES -->
+  <div id="zine" class="container">
+    <div class="row px-2 zine-carousel">
+      <!-- SLIDE ONE -->
+      <div id="zine-slide-one" class="col-12 ease-anim">
+        <div class="row zine-container">
+          <div class="col-12 col-md-5 align-middle">
+            <img class="full-img" src="assets/zine/undraw_browsing_urt9.svg" alt="What are Zines?">
+          </div>
+          <div class="col-12 col-md-7 ">
+            <section id="zine-slide-one-text" class="ease-anim zine-slide">
+              <p class="zine-header my-2 primary-color-txt">What are Zines?</p>
+              <p class="zine-text">A zine (zeen) is an independently or self-published booklet, often created
+                by physically cutting and gluing text and images together onto am aster flat for
+                photocopying, but it is also common to produce the master by typing and formatting pages
+                on a computer.
+              </p>
+            </section>
+            <section id="zine-slide-two-text" class="ease-anim zine-slide hidden hide-on-sm">
+              <p class="zine-header my-2 primary-color-txt">Zines!</p>
+              <p class="zine-text">GREAT EXAMPLES OF ZINES HERE
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDE TWO -->
+      <div id="zine-slide-two" class="col-12 ease-anim">
+        <div class="row zine-container">
+          <div class="col-12 col-md-5 align-middle">
+            <section id="zine-image-two" class="ease-anim zine-slide">
+              <img class="full-img" src="assets/zine/undraw_book_lover_mkck.svg" alt="Book">
+            </section>
+            <section id="zine-image-three" class="ease-anim zine-slide hidden hide-on-sm">
+              <img class="full-img" src="assets/zine/undraw_cookie_love_ulvn.svg" alt="Love">
+            </section>
+          </div>
+          <!-- FOR MOBILE DISPLAY -->
+          <div class="col-12 col-md-7 show-on-sm-only">
+            <section>
+              <p class="zine-header my-2 primary-color-txt">Zines!</p>
+              <p class="zine-text">GREAT EXAMPLES OF ZINES HERE
+              </p>
+            </section>
+          </div>
+          <!-- END -->
+        </div>
+      </div>
+      <!-- SLIDE THREE -->
+      <div id="zine-slide-three" class="col-12 ease-anim">
+        <div class="row">
+          <!-- FOR MOBILE DISPLAY -->
+          <div class="col-12 col-md-5 align-middle show-on-sm-only">
+            <section>
+              <img class="full-img" src="assets/zine/undraw_cookie_love_ulvn.svg" alt="Love">
+            </section>
+          </div>
+          <!-- END -->
+          <div class="col-12 col-md-7">
+            <p class="zine-header my-2 primary-color-txt">Get Connected</p>
+            <p class="zine-text">LINKS/ETC
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container hide-on-sm">
+      <div class="row justify-content-center">
+        <div class="zine-examples">
+          BUTTON HANDLERS
+          <div id="zine-button-one" style="height: 50px;">
+            BUTTON 1
+          </div>
+          <div id="zine-button-two" style="height: 50px;">
+            BUTTON 2
+          </div>
+          <div id="zine-button-three" style="height: 50px;">
+            BUTTON 3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- STORIES -->
+  <!-- EVENTS -->
+
+  <!-- SCRIPTS -->
   <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script> -->
+  <script src="./js/javascript.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -1,0 +1,68 @@
+/* ===
+ZINES
+===*/
+.zine-carousel{
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.zine-header{
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.zine-text{
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.zine-text::before {
+  position: absolute;
+  left: 0;
+  top: 67%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #7DAA92;
+  border-radius: 1.5rem;
+  content: '';
+}
+
+.ease-anim{
+  transition: all 1000ms ease-in-out;
+}
+
+.transition-offscreen{
+  transform: translateX(-41%);
+}
+
+.transition-offscreen-2{
+  transform: translateX(-100%);
+}
+
+.transition-offscreen-3{
+  transform: translateX(-158%);
+}
+
+.zine-container{
+  position: relative;
+  padding: 3rem 0rem;
+}
+
+.zine-slide{
+  position: absolute;
+  top: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  .zine-carousel{  
+    margin-left: 0rem;
+    margin-right: 0rem;
+    flex-wrap: wrap;
+  }
+  .zine-slide{
+    position: relative;
+  }
+}
