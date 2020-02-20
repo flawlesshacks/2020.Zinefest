@@ -21,6 +21,10 @@ body{
   background-color: #EFEFEF;
 }
 
+.text-align-center{
+  text-align: center;
+}
+
 .full-img{
   width: 100%;
 }

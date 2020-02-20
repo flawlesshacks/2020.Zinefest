@@ -27,3 +27,5 @@ HTML, CSS, JavaScript
 Amazing character illustrations provided by [Undraw](https://undraw.co/)
 
 Fonts [FONT NAME](https://fonts.google.com/)
+
+Icons [Material Design](https://material.io/)
