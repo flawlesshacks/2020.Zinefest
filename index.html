@@ -12,6 +12,7 @@
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./css/bootstrap-grid.min.css" type="text/css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/helper.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/navbar.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/zines.styles.css" type="text/css">
@@ -131,11 +132,11 @@
           </div>
         </div>
       </div>
-              <!-- CAROUSEL CONTROLS -->
-              <div class='carousel-control hide-on-sm'>
-                <i id="arrow-left" class="material-icons arrow-icons arrow-disabled">keyboard_arrow_left</i>
-                <i id="arrow-right" class="material-icons arrow-icons">keyboard_arrow_right</i>
-              </div>
+      <!-- CAROUSEL CONTROLS -->
+      <div class='carousel-control hide-on-sm'>
+        <i id="arrow-left" class="material-icons arrow-icons arrow-disabled">keyboard_arrow_left</i>
+        <i id="arrow-right" class="material-icons arrow-icons">keyboard_arrow_right</i>
+      </div>
     </div>
   </div>
   <!-- STORIES -->
@@ -144,7 +145,7 @@
     <!-- POSTS -->
     <div class="row">
       <div class="col-12">
-      <h2 style="text-align: end;">Posts</h2>
+        <h2 style="text-align: end;">Posts</h2>
       </div>
     </div>
     <div class="row my-4 story-box-container">
@@ -210,49 +211,58 @@
     <!-- PICTURES -->
     <div class="row my-3">
       <div class="col-12">
-      <h2 style="text-align: end;">Pictures</h2>
+        <h2 style="text-align: end;">Pictures</h2>
       </div>
     </div>
   </div>
   <div class="row mx-0">
     <div class="image-collection-items">
       <div>
-        <p class="photo-title">Zine by 
+        <p class="photo-title">Zine by
           Giulia Bertelli</p>
-        <div class="photo-blur" style="background-image: url(./assets/stories/pictures/zine-giulia-bertelli.jpeg); background-position: bottom; background-size: cover;"></div>
+        <div class="photo-blur"
+          style="background-image: url(./assets/stories/pictures/zine-giulia-bertelli.jpeg); background-position: bottom; background-size: cover;">
+        </div>
       </div>
       <img class="limited-img" src="./assets/stories/pictures/zine-giulia-bertelli.jpeg" alt="Photo">
     </div>
     <div class="image-collection-items">
       <div>
-        <p class="photo-title black-text">Hypebeast by 
+        <p class="photo-title black-text">Hypebeast by
           Linus Mimietz</p>
-        <div class="photo-blur" style="background-image: url(./assets/stories/pictures/hypebeast-linus-mimietz.jpeg); background-position: bottom; background-size: cover;"></div>
+        <div class="photo-blur"
+          style="background-image: url(./assets/stories/pictures/hypebeast-linus-mimietz.jpeg); background-position: bottom; background-size: cover;">
+        </div>
       </div>
       <img class="limited-img" src="./assets/stories/pictures/hypebeast-linus-mimietz.jpeg" alt="Photo">
     </div>
     <div class="image-collection-items">
       <div>
-        <p class="photo-title">Southern Exposure by 
+        <p class="photo-title">Southern Exposure by
           New York Queer Zine Fair</p>
-        <div class="photo-blur" style="background-image: url(./assets/stories/pictures/southern-exposure-new_york_queer_zine_fair.jpg); background-position: bottom; background-size: cover;"></div>
+        <div class="photo-blur"
+          style="background-image: url(./assets/stories/pictures/southern-exposure-new_york_queer_zine_fair.jpg); background-position: bottom; background-size: cover;">
+        </div>
       </div>
-      <img class="limited-img" src="./assets/stories/pictures/southern-exposure-new_york_queer_zine_fair.jpg" alt="Photo">
+      <img class="limited-img" src="./assets/stories/pictures/southern-exposure-new_york_queer_zine_fair.jpg"
+        alt="Photo">
     </div>
     <div class="image-collection-items">
       <div>
-        <p class="photo-title">Quiet reading time by 
+        <p class="photo-title">Quiet reading time by
           Annie Spratt</p>
-        <div class="photo-blur" style="background-image: url(./assets/stories/pictures/quiet-reading-time-annie-spratt.jpeg); background-position: bottom; background-size: cover;"></div>
+        <div class="photo-blur"
+          style="background-image: url(./assets/stories/pictures/quiet-reading-time-annie-spratt.jpeg); background-position: bottom; background-size: cover;">
+        </div>
       </div>
       <img class="limited-img" src="./assets/stories/pictures/quiet-reading-time-annie-spratt.jpeg" alt="Photo">
     </div>
   </div>
   <!-- EVENTS -->
   <div class="row mx-0 events-container"">
-  <div class="container align-middle mt-5">
+  <div class=" container align-middle mt-5">
     <h1 id="events">Events</h1>
-    <div id="states" class="row">
+    <div id="states" class="row" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="800">
       <!-- STATES LOADED FROM JS -->
     </div>
   </div>
@@ -262,7 +272,12 @@
 
   </div>
   <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="./js/javascript.js" type="text/javascript"></script>
+
 </body>
 
 </html>
