@@ -5,13 +5,17 @@ NAVBAR
   background-color: white;
   z-index: 99;
   font-size: 1.2rem;
-  position: sticky;
+  position: relative;
   top:0px;
+}
+
+.sticky{
+  position: sticky !important;
 }
 
 #logo-container{
   top: 0px;
-  position: fixed;
+  position: absolute;
 }
 
 #logo{
@@ -39,23 +43,9 @@ NAVBAR
 .nav-list .nav-links {
   padding: 1rem 2rem;
   color: black;
-  text-decoration: none;
-}
-
-.nav-list .nav-links:link {
-  text-decoration: none;
-}
-
-.nav-list .nav-links:visited {
-  text-decoration: none;
-}
-
-.nav-list .nav-links:hover {
-  text-decoration: none;
 }
 
 .nav-list .nav-links:active {
-  text-decoration: none;
   border-bottom: 1px solid gray;
 }
 

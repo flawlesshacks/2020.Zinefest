@@ -35,6 +35,10 @@ Various Photos [Unsplash](https://unsplash.com/)
 
 Animate On Scroll [AOS](https://michalsnik.github.io/aos/)
 
+Green Sock GSAP [GSAP](https://greensock.com/gsap/)
+
+Scroll Magic [Scroll Magic](https://scrollmagic.io/)
+
 <h2 id="update">Update</h2>
 
 New Zines to add to the list?
