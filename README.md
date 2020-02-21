@@ -33,6 +33,8 @@ Various Icons [Material Design](https://material.io/)
 
 Various Photos [Unsplash](https://unsplash.com/)
 
+Animate On Scroll [AOS](https://michalsnik.github.io/aos/)
+
 <h2 id="update">Update</h2>
 
 New Zines to add to the list?

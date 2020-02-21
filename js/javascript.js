@@ -151,18 +151,22 @@ function handleRenderStates() {
   let stateString = ""
   let linkString = ""
   let zineStates = JSON.parse(this.responseText)
-  zineStates.states.forEach(state => {
+  zineStates.states.forEach((state,i) => {
     state.list.forEach(e => {
       linkString += `<li><a href=${e.website}>${e.site_name}</a></li>`
     })
-    stateString += (`
-    <div class="col-6 col-md-3">
-    <p class="state truncate">${state.name}</p>
-    <ul class="zine-list">
-      ${linkString}
-    </ul>
-  </div>`)
+    // FIRST ONE STARTS DIV
+    // CLOSES DIV EVERY i%4 CLOSES COLUMN
+    if(i===0)
+      stateString +=(`<div class="col-6 col-md-4">`)
+    else if(i%4===0)
+      stateString +=(`</div><div class="col-6 col-md-4">`)
 
+      stateString += (`
+      <p class="state truncate">${state.name}</p>
+      <ul class="zine-list">
+        ${linkString}
+      </ul>`)
     linkString = ""
   })
   document.getElementById("states").innerHTML = stateString
