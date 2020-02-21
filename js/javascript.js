@@ -129,10 +129,14 @@ handleArrow = (arrow) => {
 // ==== EVENT LISTENER
 // SCROLL HANDLER
 document.addEventListener("scroll", () => {
-  if (window.scrollY > (document.documentElement.clientHeight * 2) -85)
+  if (window.scrollY > (document.documentElement.clientHeight) -85){
     document.getElementById("nav").classList.add("sticky")
-  else
+    // document.getElementById("video").pause()
+  }
+  else{
     document.getElementById("nav").classList.remove("sticky")
+    // document.getElementById("video").play()
+  }
 })
 // ZINE CAROUSEL BUTTONS
 document.getElementById("zine-button-three").addEventListener("click", () => {
