@@ -20,6 +20,35 @@ EVENTS
 }
 
 .zine-list{
-  color: #C7CCD1;
   font-size: 1.2rem;
+  max-height: 500px;
+  overflow: auto;
+  min-height: 90px;
+}
+
+.zine-list li a{
+  color: #C7CCD1;
+}
+
+.zine-list li a{
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+.zine-list li a:link {
+  text-decoration: none;
+}
+
+.zine-list li a:visited {
+  text-decoration: none;
+}
+
+.zine-list li a:hover {
+  text-decoration: none;
+  color: #5348E6;
+}
+
+.zine-list li a:active {
+  text-decoration: none;
+  border-bottom: 1px solid gray;
 }
