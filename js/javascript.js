@@ -131,11 +131,13 @@ handleArrow = (arrow) => {
 document.addEventListener("scroll", () => {
   if (window.scrollY > (document.documentElement.clientHeight) -85){
     document.getElementById("nav").classList.add("sticky")
-    // document.getElementById("video").pause()
+    document.getElementById("video").pause()
+    // document.getElementById("video-mini").pause()
   }
   else{
     document.getElementById("nav").classList.remove("sticky")
-    // document.getElementById("video").play()
+    document.getElementById("video").play()
+    // document.getElementById("video-mini").play()
   }
 })
 // ZINE CAROUSEL BUTTONS
