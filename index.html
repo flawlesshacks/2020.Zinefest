@@ -10,11 +10,12 @@
   <meta name="description" content="Flawless Zine">
   <meta name="keywords" content="zinefest,magazine,comic,newspaper,original,content">
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="./css/bootstrap-grid.min.css" type="text/css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/aos.css">
   <link rel="stylesheet" href="./css/helper.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/navbar.styles.css" type="text/css">
+  <link rel="stylesheet" href="./css/home.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/zines.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/stories.styles.css" type="text/css">
   <link rel="stylesheet" href="./css/events.styles.css" type="text/css">
@@ -49,12 +50,22 @@
   <!-- HOME -->
   <div id="home" class="row mx-0">
     <div class="col-12 p-0">
-      <video autoplay loop muted style="width: 100%">
-        <source src="./assets/home/Slide-Show.mp4" type="video/mp4">
-        <source src="./assets/home/Slide-Show.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
+    <div id="scrollMaster">
+      <div id="scrollContainer">
+        <section class="panel">
+          <!-- autoplay loop -->
+          <video   muted style="width: 100%">
+            <source src="./assets/home/Slide-Show.mp4" type="video/mp4">
+            <source src="./assets/home/Slide-Show.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section class="panel bookcover">
+          BOOKS INFO HERE
+        </section>
     </div>
+  </div>
+  </div>
   </div>
   <!-- ZINES -->
   <div id="zine" class="py-5">
@@ -279,12 +290,18 @@
 
   </div>
   <!-- SCRIPTS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- External Libraries -->
+  <script src="js/aos.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/ScrollMagic.min.js"></script>
+  <script src="js/animation.gsap.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
+
+  <!-- Initialization Script -->
+  <script src="./js/javascript.js" type="text/javascript"></script>
   <script>
     AOS.init();
   </script>
-  <script src="./js/javascript.js" type="text/javascript"></script>
-
 </body>
 
 </html>

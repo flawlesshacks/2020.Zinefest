@@ -128,11 +128,11 @@ handleArrow = (arrow) => {
 
 // ==== EVENT LISTENER
 // SCROLL HANDLER
-document.addEventListener("scroll",()=>{
-  if(window.scrollY > (document.documentElement.clientHeight - 85))
+document.addEventListener("scroll", () => {
+  if (window.scrollY > (document.documentElement.clientHeight * 2) -85)
     document.getElementById("nav").classList.add("sticky")
   else
-  document.getElementById("nav").classList.remove("sticky")
+    document.getElementById("nav").classList.remove("sticky")
 })
 // ZINE CAROUSEL BUTTONS
 document.getElementById("zine-button-three").addEventListener("click", () => {
@@ -160,18 +160,18 @@ function handleRenderStates() {
   let stateString = ""
   let linkString = ""
   let zineStates = JSON.parse(this.responseText)
-  zineStates.states.forEach((state,i) => {
+  zineStates.states.forEach((state, i) => {
     state.list.forEach(e => {
       linkString += `<li><a href=${e.website}>${e.site_name}</a></li>`
     })
     // FIRST ONE STARTS DIV
     // CLOSES DIV EVERY i%4 CLOSES COLUMN
-    if(i===0)
-      stateString +=(`<div class="col-6 col-md-4">`)
-    else if(i%4===0)
-      stateString +=(`</div><div class="col-6 col-md-4">`)
+    if (i === 0)
+      stateString += (`<div class="col-6 col-md-4">`)
+    else if (i % 4 === 0)
+      stateString += (`</div><div class="col-6 col-md-4">`)
 
-      stateString += (`
+    stateString += (`
       <p class="state truncate">${state.name}</p>
       <ul class="zine-list">
         ${linkString}
@@ -188,4 +188,33 @@ window.onload = () => {
   xmlRequest.addEventListener("load", handleRenderStates);
   xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-zines.JSON");
   xmlRequest.send();
+
+  // SCROLL MAGIC GSAP
+  const controller = new ScrollMagic.Controller();
+  const timeline = new TimelineMax();
+  timeline.fromTo(
+    "section.panel.bookcover",
+    1, {
+      xPercent: 90
+    }, {
+      xPercent: 0,
+      ease: Linear.easeNone
+    },
+    ""
+  );
+
+  new ScrollMagic.Scene({
+    triggerElement: "#scrollMaster",
+    triggerHook: "onLeave",
+    duration: "100%"
+  })
+    .setPin("#scrollMaster")
+    .setTween(timeline)
+    .addTo(controller)
+    // .addIndicators({
+    //   colorTrigger: "blue",
+    //   colorStart: "green",
+    //   colorEnd: "red",
+    //   indent: 40
+    // });
 }
