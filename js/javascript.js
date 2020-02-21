@@ -127,6 +127,14 @@ handleArrow = (arrow) => {
 
 
 // ==== EVENT LISTENER
+// SCROLL HANDLER
+document.addEventListener("scroll",()=>{
+  if(window.scrollY > (document.documentElement.clientHeight - 85))
+    document.getElementById("nav").classList.add("sticky")
+  else
+  document.getElementById("nav").classList.remove("sticky")
+})
+// ZINE CAROUSEL BUTTONS
 document.getElementById("zine-button-three").addEventListener("click", () => {
   handleButtonThree()
 });
@@ -139,6 +147,7 @@ document.getElementById("zine-button-one").addEventListener("click", () => {
   handleButtonOne()
 });
 
+// ZINE CAROUSEL ARROWS
 document.getElementById("arrow-left").addEventListener("click", () => {
   handleArrow("arrow-left")
 });
@@ -174,7 +183,7 @@ function handleRenderStates() {
 
 // ==== DOCUMENT LOAD
 window.onload = () => {
-  // LOAD STATE FROM JSON
+  // LOAD STATE FROM JSON FOR EVENTS
   var xmlRequest = new XMLHttpRequest();
   xmlRequest.addEventListener("load", handleRenderStates);
   xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-zines.JSON");
