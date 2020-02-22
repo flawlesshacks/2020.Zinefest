@@ -162,11 +162,11 @@ document.getElementById("arrow-right").addEventListener("click", () => {
   handleArrow("arrow-right")
 });
 
-const handleLoadStories = () => {
-  let stateString = ""
-  let zineStates = JSON.parse(this.responseText)
-  zineStates.states.forEach(story => {
-    stateString += (`<div class="col-8 col-md-4 text-align-center">
+function handleLoadStories(){
+  let storyString = ""
+  let responseJSON = JSON.parse(this.responseText)
+  responseJSON.stories.forEach(story => {
+    storyString += (`<div class="col-8 col-md-4 text-align-center">
     <div class="story-boxes mx-2 p-4 active-story">
       <p class="gray-text">${story.type}</p>
       <h2 class="story-box-header truncate">${story.title}</h2>
@@ -181,10 +181,10 @@ const handleLoadStories = () => {
     </div>
   </div>`)
   })
-  document.getElementById("story-box-container").innerHTML = stateString
+  document.getElementById("story-box-container").innerHTML = storyString
 }
 
-const handleLoadStates = () => {
+function handleLoadStates(){
   let stateString = ""
   let linkString = ""
   let zineStates = JSON.parse(this.responseText)
@@ -217,9 +217,9 @@ window.onload = () => {
   xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-zines.JSON");
   xmlRequest.send();
 
-  xmlRequest.addEventListener("load", handleLoadStories);
-  xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-stories.JSON");
-  xmlRequest.send();
+  // xmlRequest.addEventListener("load", handleLoadStories);
+  // xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-stories.JSON");
+  // xmlRequest.send();
 
   // SCROLL MAGIC GSAP
   const controller = new ScrollMagic.Controller();
