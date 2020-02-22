@@ -70,7 +70,8 @@ ZINES
 .carousel-control{
   position: absolute;
   top: 45%;
-  width: 100%;
+  left: -5%;
+  width: 110%;
 }
 
 .arrow-icons{

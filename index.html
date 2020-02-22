@@ -54,14 +54,14 @@
         <div id="scrollContainer">
           <section class="panel hide-on-sm">
             <!-- autoplay -->
-            <video id="video" autoplay loop muted style="width: 100%">
+            <video id="video" loop muted style="width: 100%">
               <source src="./assets/home/Slide-Show.mp4" type="video/mp4">
               <source src="./assets/home/Slide-Show.webm" type="video/webm">
               Your browser does not support the video tag.
             </video>
           </section>
           <section class="panel show-on-sm-only">
-            <!-- autoplay loop -->
+            <!-- autoplay -->
             VERTICAL VIDEO FOR MOBILE
             <!-- <video id="video-mini" autoplay loop muted style="width: 100%">
               <source src="./assets/home/Slide-Show.mp4" type="video/mp4">
@@ -80,13 +80,13 @@
                 <h1 class='tagline'>MAGAZINE</h1>
                 <h1 class='tagline'>NEWSPAPER</h1>
                 <a href="#zine">
-                <h3 class="tagline-more-info pt-5">
-                  SCROLL FOR MORE
-                </h3>
-                <i class="material-icons tagline-more-info">arrow_drop_down</i>
-              </a>
+                  <h3 class="tagline-more-info pt-5">
+                    SCROLL FOR MORE
+                  </h3>
+                  <i class="material-icons tagline-more-info">arrow_drop_down</i>
+                </a>
               </div>
-              <div class="col-6">
+              <div class="col-6" style="overflow: hidden;">
                 <img
                   src="https://images.unsplash.com/photo-1515165616480-efd71925068f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                   alt="Assorted Book Lot By Charisse Kenion">
@@ -196,40 +196,23 @@
         <h2 style="text-align: end;">Posts</h2>
       </div>
     </div>
-    <div class="row my-4 story-box-container">
-      <!-- STORY ONE -->
-      <div class="col-6 col-md-4 text-align-center">
+    <div id="story-box-container" class="row my-4 ">
+      <!-- STORY FROM JS -->
+      <div class="col-8 col-md-4 text-align-center">
         <div class="story-boxes mx-2 p-4 active-story">
-          <p class="gray-text">Story Type</p>
-          <h2 class="story-box-header truncate">Story Title</h2>
+          <p class="gray-text">STORY TYPE</p>
+          <h2 class="story-box-header truncate">STORY TITLE</h2>
           <div id="story-one" class="story-controller">
+          <div id="story-img" class="meta">STORY IMAGE</div>
+          <div id="story-body" class="meta">
+          STORY BODY
+          </div>
             <p>Read More</p>
             <i class="material-icons">arrow_drop_down</i>
           </div>
         </div>
       </div>
-      <!-- STORY TWO -->
-      <div class="col-6 col-md-4 text-align-center">
-        <div class="story-boxes mx-2 p-4">
-          <p class="gray-text">Story Type</p>
-          <h2 class="story-box-header">Story Title</h2>
-          <div id="story-two" class="story-controller">
-            <p>Read More</p>
-            <i class="material-icons">arrow_drop_down</i>
-          </div>
-        </div>
-      </div>
-      <!-- STORY THREE -->
-      <div class="col-6 col-md-4 text-align-center">
-        <div class="story-boxes mx-2 p-4">
-          <p class="gray-text">Story Type</p>
-          <h2 class="story-box-header">Story Title</h2>
-          <div id="story-three" class="story-controller">
-            <p>Read More</p>
-            <i class="material-icons">arrow_drop_down</i>
-          </div>
-        </div>
-      </div>
+     
     </div>
     <!-- STORY CONTAINER -->
     <div class="col-12">
@@ -243,7 +226,6 @@
             By: AUTHOR NAME
           </h4>
         </div>
-        </divid="story-container">
         <article class="row">
           <p class="story-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet commodo ex.
             In tempor augue erat, sed condimentum eros elementum et. Etiam ornare justo id ex
@@ -310,7 +292,7 @@
   <div class="row mx-0 events-container"">
   <div class=" container align-middle mt-5">
     <h1 id="events">Events</h1>
-    <div id="states" class="row" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="800">
+    <div id="states" class="row" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
       <!-- STATES LOADED FROM JS -->
     </div>
   </div>
