@@ -8,21 +8,25 @@ STORIES
   margin: 2rem 0rem;
 }
 
-.story-box-container {
+#story-box-container {
   flex-wrap: nowrap;
   overflow: auto;
 }
 
-.story-box-container .story-boxes {
+#story-box-container .story-boxes {
   border: 5px solid black;
 }
 
-.story-box-container .story-boxes .story-box-header {
+#story-box-container .story-boxes .story-box-header {
   font-size: 1.8rem;
 }
 
 .active-story {
   /* border-bottom: 0px !important; */
+}
+
+.meta{
+  display: none;
 }
 
 .story-controller {

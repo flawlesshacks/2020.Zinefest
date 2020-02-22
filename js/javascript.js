@@ -129,14 +129,14 @@ handleArrow = (arrow) => {
 // ==== EVENT LISTENER
 // SCROLL HANDLER
 document.addEventListener("scroll", () => {
-  if (window.scrollY > (document.documentElement.clientHeight) -85){
+  if (window.scrollY > (document.documentElement.clientHeight) * 2 -85){
     document.getElementById("nav").classList.add("sticky")
-    document.getElementById("video").pause()
+    // document.getElementById("video").pause()
     // document.getElementById("video-mini").pause()
   }
   else{
     document.getElementById("nav").classList.remove("sticky")
-    document.getElementById("video").play()
+    // document.getElementById("video").play()
     // document.getElementById("video-mini").play()
   }
 })
@@ -162,7 +162,29 @@ document.getElementById("arrow-right").addEventListener("click", () => {
   handleArrow("arrow-right")
 });
 
-function handleRenderStates() {
+const handleLoadStories = () => {
+  let stateString = ""
+  let zineStates = JSON.parse(this.responseText)
+  zineStates.states.forEach(story => {
+    stateString += (`<div class="col-8 col-md-4 text-align-center">
+    <div class="story-boxes mx-2 p-4 active-story">
+      <p class="gray-text">${story.type}</p>
+      <h2 class="story-box-header truncate">${story.title}</h2>
+      <div id="story-one" class="story-controller">
+      <div id="story-img">${story.img}</div>
+      <div id="story-body" class="meta">
+      ${story.body}
+      </div>
+        <p>Read More</p>
+        <i class="material-icons">arrow_drop_down</i>
+      </div>
+    </div>
+  </div>`)
+  })
+  document.getElementById("story-box-container").innerHTML = stateString
+}
+
+const handleLoadStates = () => {
   let stateString = ""
   let linkString = ""
   let zineStates = JSON.parse(this.responseText)
@@ -190,9 +212,13 @@ function handleRenderStates() {
 // ==== DOCUMENT LOAD
 window.onload = () => {
   // LOAD STATE FROM JSON FOR EVENTS
-  var xmlRequest = new XMLHttpRequest();
-  xmlRequest.addEventListener("load", handleRenderStates);
+  let xmlRequest = new XMLHttpRequest();
+  xmlRequest.addEventListener("load", handleLoadStates);
   xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-zines.JSON");
+  xmlRequest.send();
+
+  xmlRequest.addEventListener("load", handleLoadStories);
+  xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-stories.JSON");
   xmlRequest.send();
 
   // SCROLL MAGIC GSAP
