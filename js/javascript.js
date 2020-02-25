@@ -129,12 +129,11 @@ handleArrow = (arrow) => {
 // ==== EVENT LISTENER
 // SCROLL HANDLER
 document.addEventListener("scroll", () => {
-  if (window.scrollY > (document.documentElement.clientHeight) * 2 -85){
+  if (window.scrollY > (document.documentElement.clientHeight) * 2 - 85) {
     document.getElementById("nav").classList.add("sticky")
     // document.getElementById("video").pause()
     // document.getElementById("video-mini").pause()
-  }
-  else{
+  } else {
     document.getElementById("nav").classList.remove("sticky")
     // document.getElementById("video").play()
     // document.getElementById("video-mini").play()
@@ -162,20 +161,39 @@ document.getElementById("arrow-right").addEventListener("click", () => {
   handleArrow("arrow-right")
 });
 
-function handleLoadStories(storyList){
+function handleStoryHandler(){
+  let storyContainer = document.getElementById("story-box-container").children
+  let currentTitle = document.getElementById("current-story-title")
+  let currentAuthor = document.getElementById("current-story-author")
+  let currentImg = document.getElementById("current-story-img")
+  let currentBody = document.getElementById("current-story-body")
+  // Find each story box and add event handler to swap meta data with current selection
+  for(let i = 0; i < storyContainer.length; i++){
+    storyContainer[i].children[0].children[3].addEventListener("click",()=>{
+      currentTitle.innerText=storyContainer[i].children[0].children[2].children[0].innerText
+      currentAuthor.innerText=storyContainer[i].children[0].children[2].children[1].innerText
+      currentImg.innerText=storyContainer[i].children[0].children[2].children[2].innerText
+      currentBody.innerText=storyContainer[i].children[0].children[2].children[3].innerText
+    })
+  }
+}
+
+function handleLoadStories(storyList) {
   let storyString = ""
-  if(typeof storyList===JSON)
-    storyList=JSON.parse(storyList)
-  storyList.forEach(story => {
+  if (typeof storyList === JSON)
+    storyList = JSON.parse(storyList)
+  storyList.forEach((story, i) => {
     storyString += (`<div class="col-8 col-md-4 text-align-center">
-    <div class="story-boxes mx-2 p-4 active-story">
+    <div class="story-boxes mx-2 p-4">
       <p class="gray-text">${story.type}</p>
       <h2 class="story-box-header truncate">${story.title}</h2>
-      <div id="story-one" class="story-controller">
-      <div id="story-img">${story.img}</div>
-      <div id="story-body" class="meta">
-      ${story.body}
+      <div class="meta">
+        <div class="story-title">${story.title}</div>
+        <div class="story-author">${story.author}</div>
+        <div class="story-img">${story.img}</div>
+        <div class="story-body">${story.body}</div>
       </div>
+      <div class="story-controller">
         <p>Read More</p>
         <i class="material-icons">arrow_drop_down</i>
       </div>
@@ -183,13 +201,14 @@ function handleLoadStories(storyList){
   </div>`)
   })
   document.getElementById("story-box-container").innerHTML = storyString
+  handleStoryHandler()
 }
 
-function handleLoadStates(stateList){
+function handleLoadStates(stateList) {
   let stateString = ""
   let linkString = ""
-  if(typeof stateList===JSON)
-    stateList=JSON.parse(stateList)
+  if (typeof stateList === JSON)
+    stateList = JSON.parse(stateList)
   stateList.forEach((state, i) => {
     state.list.forEach(e => {
       linkString += `<li><a href=${e.website}>${e.site_name}</a></li>`
@@ -233,18 +252,18 @@ window.onload = () => {
   );
 
   new ScrollMagic.Scene({
-    triggerElement: "#scrollMaster",
-    triggerHook: "onLeave",
-    duration: "100%"
-  })
+      triggerElement: "#scrollMaster",
+      triggerHook: "onLeave",
+      duration: "100%"
+    })
     .setPin("#scrollMaster")
     .setTween(timeline)
     .addTo(controller)
-    // .addIndicators({
-    //   colorTrigger: "blue",
-    //   colorStart: "green",
-    //   colorEnd: "red",
-    //   indent: 40
-    // });
-    // FOR DEBUG USE. SHOWS ScrollMagic Indicators
+  // .addIndicators({
+  //   colorTrigger: "blue",
+  //   colorStart: "green",
+  //   colorEnd: "red",
+  //   indent: 40
+  // });
+  // FOR DEBUG USE. SHOWS ScrollMagic Indicators
 }

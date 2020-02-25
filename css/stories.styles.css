@@ -21,10 +21,6 @@ STORIES
   font-size: 1.8rem;
 }
 
-.active-story {
-  /* border-bottom: 0px !important; */
-}
-
 .meta{
   display: none;
 }
@@ -38,18 +34,18 @@ STORIES
   border: 5px solid black;
 }
 
-.story-header {
+#current-story-title {
   font-size: 3rem;
   text-transform: uppercase;
 }
 
-.story-author {
+#current-story-author {
   color: gray;
   border-bottom: 1px solid gray;
   text-transform: uppercase;
 }
 
-.story-text {
+#current-story-body {
   font-size: 1.4rem;
 }
 
@@ -72,4 +68,23 @@ STORIES
   height: 70px;
   width: 100%;
   filter: blur(5px);
+}
+
+
+
+@media screen and (max-width: 800px) {
+  #current-story-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  
+  #current-story-author {
+    color: gray;
+    border-bottom: 1px solid gray;
+    text-transform: uppercase;
+  }
+  
+  #current-story-body {
+    font-size: 1.1rem;
+  }
 }
