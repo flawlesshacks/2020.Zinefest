@@ -221,10 +221,14 @@ window.onload = () => {
   // SCROLL MAGIC GSAP
   const controller = new ScrollMagic.Controller();
   const timeline = new TimelineMax();
+  let xValue = 90
+  // Mobile Screen. Makes bookcover within screen bounds
+  if(screen.width < 500)
+    xValue = 80
   timeline.fromTo(
     "section.panel.bookcover",
     1, {
-      xPercent: 90
+      xPercent: xValue
     }, {
       xPercent: 0,
       ease: Linear.easeNone
