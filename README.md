@@ -43,12 +43,14 @@ Scroll Magic [Scroll Magic](https://scrollmagic.io/)
 
 New Zines to add to the list?
 
-How to update:
+How to update Zine States:
 
-- Open assets/ and load the text file `state-object.txt`
+- Open assets and load the JavaScript file `stateList.js`
 
 - Add or Update new states and websites to the object list. (List is alphabetized by state then by website name.)
 
-- JSON.stringify() the new text string and save as `list-of-zines.json`.
+How to update Stories:
 
-- Git Add, Commit, and Push. JavaScript file loads from raw file of `assets/list-of-zine.json` hosted on GitHub.
+- Open assets and load the JavaScript file `storyList.js`
+
+- Add new stories or update current story object.

@@ -162,10 +162,11 @@ document.getElementById("arrow-right").addEventListener("click", () => {
   handleArrow("arrow-right")
 });
 
-function handleLoadStories(){
+function handleLoadStories(storyList){
   let storyString = ""
-  let responseJSON = JSON.parse(this.responseText)
-  responseJSON.stories.forEach(story => {
+  if(typeof storyList===JSON)
+    storyList=JSON.parse(storyList)
+  storyList.forEach(story => {
     storyString += (`<div class="col-8 col-md-4 text-align-center">
     <div class="story-boxes mx-2 p-4 active-story">
       <p class="gray-text">${story.type}</p>
@@ -184,11 +185,12 @@ function handleLoadStories(){
   document.getElementById("story-box-container").innerHTML = storyString
 }
 
-function handleLoadStates(){
+function handleLoadStates(stateList){
   let stateString = ""
   let linkString = ""
-  let zineStates = JSON.parse(this.responseText)
-  zineStates.states.forEach((state, i) => {
+  if(typeof stateList===JSON)
+    stateList=JSON.parse(stateList)
+  stateList.forEach((state, i) => {
     state.list.forEach(e => {
       linkString += `<li><a href=${e.website}>${e.site_name}</a></li>`
     })
@@ -211,15 +213,10 @@ function handleLoadStates(){
 
 // ==== DOCUMENT LOAD
 window.onload = () => {
-  // LOAD STATE FROM JSON FOR EVENTS
-  let xmlRequest = new XMLHttpRequest();
-  xmlRequest.addEventListener("load", handleLoadStates);
-  xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-zines.JSON");
-  xmlRequest.send();
-
-  // xmlRequest.addEventListener("load", handleLoadStories);
-  // xmlRequest.open("GET", "https://raw.githubusercontent.com/flawlesshacks/2020.Zinefest/master/assets/list-of-stories.JSON");
-  // xmlRequest.send();
+  // LOAD STATE FROM stateList FOR EVENTS
+  handleLoadStates(listOfStates)
+  // LOAD STORIES FROM storyList FOR STORIES
+  handleLoadStories(listOfStories)
 
   // SCROLL MAGIC GSAP
   const controller = new ScrollMagic.Controller();
@@ -249,4 +246,5 @@ window.onload = () => {
     //   colorEnd: "red",
     //   indent: 40
     // });
+    // FOR DEBUG USE. SHOWS ScrollMagic Indicators
 }

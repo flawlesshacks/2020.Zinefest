@@ -1,4 +1,5 @@
-{"states": [{
+const listOfStates = [
+  {
     "name": "Multiple States",
     "list": [{
         "site_name": "Zine Libraries unConferences",
@@ -645,4 +646,4 @@
       "website": "https://www.binderymke.com/milwaukeezinefest/"
     }]
   }
-]}
+]
