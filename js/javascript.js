@@ -182,7 +182,7 @@ function handleLoadStories(storyList) {
   let storyString = ""
   if (typeof storyList === JSON)
     storyList = JSON.parse(storyList)
-  storyList.forEach((story, i) => {
+  storyList.forEach(story => {
     storyString += (`<div class="col-8 col-md-4 text-align-center">
     <div class="story-boxes mx-2 p-4">
       <p class="gray-text">${story.type}</p>
@@ -193,10 +193,10 @@ function handleLoadStories(storyList) {
         <div class="story-img">${story.img}</div>
         <div class="story-body">${story.body}</div>
       </div>
-      <div class="story-controller">
+      <a href="#story-box-container" class="story-controller">
         <p>Read More</p>
         <i class="material-icons">arrow_drop_down</i>
-      </div>
+      </a>
     </div>
   </div>`)
   })
@@ -240,10 +240,14 @@ window.onload = () => {
   // SCROLL MAGIC GSAP
   const controller = new ScrollMagic.Controller();
   const timeline = new TimelineMax();
+  let xValue = 90
+  // Mobile Screen. Makes bookcover within screen bounds
+  if(screen.width < 500)
+    xValue = 80
   timeline.fromTo(
     "section.panel.bookcover",
     1, {
-      xPercent: 90
+      xPercent: xValue
     }, {
       xPercent: 0,
       ease: Linear.easeNone
