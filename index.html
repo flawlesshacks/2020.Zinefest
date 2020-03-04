@@ -62,12 +62,7 @@
           </section>
           <section class="panel show-on-sm-only">
             <!-- autoplay -->
-            VERTICAL VIDEO FOR MOBILE
-            <!-- <video id="video-mini" autoplay loop muted style="width: 100%">
-              <source src="./assets/home/Slide-Show.mp4" type="video/mp4">
-              <source src="./assets/home/Slide-Show.webm" type="video/webm">
-              Your browser does not support the video tag.
-            </video> -->
+            <img class="full-img" src="./assets/home/magazines-robert-anasch.jpeg">
           </section>
           <section class="panel bookcover">
             <div class="row pl-3">
@@ -199,20 +194,21 @@
     <div id="story-box-container" class="row my-4 ">
       <!-- STORY FROM JS -->
       <div class="col-8 col-md-4 text-align-center">
-        <div class="story-boxes mx-2 p-4 active-story">
-          <p class="gray-text">STORY TYPE</p>
-          <h2 class="story-box-header truncate">STORY TITLE</h2>
-          <div id="story-one" class="story-controller">
-          <div id="story-img" class="meta">STORY IMAGE</div>
-          <div id="story-body" class="meta">
-          STORY BODY
+        <div class="story-boxes mx-2 p-4">
+          <p class="gray-text">${story.type}</p>
+          <h2 class="story-box-header truncate">${story.title}</h2>
+          <div class="meta">
+            <div class="story-title">${story.title}</div>
+            <div class="story-author">${story.author}</div>
+            <div class="story-img">${story.img}</div>
+            <div class="story-body">${story.body}</div>
           </div>
+          <a href="#story-box-container" class="story-controller">
             <p>Read More</p>
             <i class="material-icons">arrow_drop_down</i>
-          </div>
+          </a>
         </div>
       </div>
-     
     </div>
     <!-- STORY CONTAINER -->
     <div class="col-12">
@@ -245,7 +241,7 @@
       </div>
     </div>
   </div>
-  <div class="row mx-0">
+  <div class="row mx-0" style="max-height: 500px; overflow: hidden;">
     <div class="image-collection-items">
       <div>
         <p class="photo-title">Zine by
